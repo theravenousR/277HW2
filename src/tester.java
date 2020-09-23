@@ -26,18 +26,43 @@ public class tester {
 
 
         IceCream straw = new IceCream("Strawberry", 12.10, 700);
-        System.out.println(DessertItem.max(straw, KitKat).getName());
+        System.out.print("Between " + straw.getName() + " with " + straw.getCalories() + " and " +
+                KitKat.getName() + " with " + KitKat.getCalories() + " the most is: ");
+        if (DessertItem.max(straw, KitKat) == null) {
+            System.out.println("They're equal");
+        }
+        else {System.out.println(DessertItem.max(straw, KitKat).getName());}
         Cookie giantCook = new Cookie("ChocCook", 21, 1.00, 250);
         Sundae screaminSugar = new Sundae("screaminSugar", 2.22, choc, 27);
-        System.out.println(DessertItem.max(giantCook, screaminSugar).getName());
+        System.out.print("Between " + giantCook.getName() + " with " + giantCook.getCalories() + " and " +
+                screaminSugar.getName() + " with " + screaminSugar.getCalories() + " the most is: ");
+        if (DessertItem.max(giantCook, screaminSugar) == null) {
+            System.out.println("They're equal");
+        }
+        else {System.out.println(DessertItem.max(giantCook, screaminSugar).getName());}
         Candy Mounds = new Candy("Mounds", 0.9, 15.12, 396);
         IceCream mint = new IceCream("Mint", 9.99, 395);
-        System.out.println(DessertItem.max(Mounds, mint).getName());
+        System.out.print("Between " + Mounds.getName() + " with " + Mounds.getCalories() + " and " +
+                mint.getName() + " with " + mint.getCalories() + " the most is: ");
+        if (DessertItem.max(Mounds, mint) == null) {
+            System.out.println("They're equal");
+        }
+        else {System.out.println(DessertItem.max(Mounds, mint).getName());}
         Sundae banana = new Sundae("banana", 2.22, choc, 60);
         IceCream caramel = new IceCream("caramel", 4.22, 542);
-        System.out.println(DessertItem.max(banana, caramel).getName());
+        System.out.print("Between " + caramel.getName() + " with " + caramel.getCalories() + " and " +
+                banana.getName() + " with " + banana.getCalories() + " the most is: ");
+        if (DessertItem.max(caramel, banana) == null) {
+            System.out.println("They're equal");
+        }
+        else {System.out.println(DessertItem.max(caramel, banana).getName());}
         Cookie nutter = new Cookie("nutter", 21, 1.00, 500);
-        System.out.println(DessertItem.max(banana, nutter).getName());
+        System.out.print("Between " + banana.getName() + " with " + banana.getCalories() + " and " +
+                nutter.getName() + " with " + nutter.getCalories() + " the most is: ");
+        if (DessertItem.max(banana, nutter) == null) {
+            System.out.println("They're equal");
+        }
+        else {System.out.println(DessertItem.max(banana, nutter).getName() + "\n");}
 
 
 
