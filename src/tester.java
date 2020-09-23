@@ -10,19 +10,37 @@ public class tester {
 
         first.enterItem(new Cookie("ChocChip", 17, 4.99, 250));
         first.enterItem(new IceCream("Vanilla", 10.05, 500));
-        IceCream choc = new IceCream("Chocolate", 5.55, 700);
+        IceCream choc = new IceCream("Chocolate", 5.55, 500);
         first.enterItem(new Sundae("Sprinkles", 2.22, choc, 27));
         System.out.println(first.toString());
-        Candy Snickers = new Candy("Snickers", 0.6, 20.00, 921);
+        Candy Snickers = new Candy("Snickers", 0.6, 20.00, 696);
         Candy KitKat = new Candy("KitKat", 0.6, 21.00, 696);
         System.out.print("\n");
 
-        System.out.println(DessertItem.max(Snickers, KitKat).getName());
+        System.out.print("Between " + Snickers.getName() + " with " + Snickers.getCalories() + " and " +
+                KitKat.getName() + " with " + KitKat.getCalories() + " the most is: ");
+        if (DessertItem.max(Snickers, KitKat) == null) {
+            System.out.println("They're equal");
+        }
+        else {System.out.println(DessertItem.max(Snickers, KitKat).getName() + "\n");}
+
+
         IceCream straw = new IceCream("Strawberry", 12.10, 700);
         System.out.println(DessertItem.max(straw, KitKat).getName());
         Cookie giantCook = new Cookie("ChocCook", 21, 1.00, 250);
         Sundae screaminSugar = new Sundae("screaminSugar", 2.22, choc, 27);
         System.out.println(DessertItem.max(giantCook, screaminSugar).getName());
+        Candy Mounds = new Candy("Mounds", 0.9, 15.12, 396);
+        IceCream mint = new IceCream("Mint", 9.99, 395);
+        System.out.println(DessertItem.max(Mounds, mint).getName());
+        Sundae banana = new Sundae("banana", 2.22, choc, 60);
+        IceCream caramel = new IceCream("caramel", 4.22, 542);
+        System.out.println(DessertItem.max(banana, caramel).getName());
+        Cookie nutter = new Cookie("nutter", 21, 1.00, 500);
+        System.out.println(DessertItem.max(banana, nutter).getName());
+
+
+
         System.out.print("\n");
 
         Desserts.add(choc);
@@ -33,7 +51,7 @@ public class tester {
         Desserts.add(screaminSugar);
 
         for (DessertItem x: Desserts) {
-            System.out.print(x.getName());
+            System.out.print("Name: " + x.getName() + " Calories: ");
             System.out.print(x.getCalories() + "\n");
         }
 
@@ -42,7 +60,7 @@ public class tester {
         Collections.sort(Desserts);
 
         for (DessertItem x: Desserts) {
-            System.out.print(x.getName());
+            System.out.print("Name: " + x.getName() + " Calories: ");
             System.out.print(x.getCalories() + "\n");
         }
 
